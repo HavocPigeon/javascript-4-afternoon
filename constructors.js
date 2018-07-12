@@ -35,7 +35,11 @@ function Employee(name, email, hireDate) {
   Assign the result of the invocation to a variable called bob.
 */
 
-// Code here
+const bob = new Employee(
+  'Bob',
+  'bob@gmail.com',
+  '01-02-98'
+)
 
 
 
@@ -56,6 +60,14 @@ mustang.moveCar(); // Increments mustang' move property by 10. Returns the new m
   You'll also need to use the 'this' keyword properly in order to make sure you're invoking moveCar on the right object (prius vs mustang).
 */
 
-// Code here
-
+function Car (make, model, year, move, moveCar){
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.move = 0;
+  this.moveCar = () => {
+    this.move += 10;
+    return this.move;
+  }
+}
 
